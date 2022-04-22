@@ -1561,6 +1561,11 @@ type BranchProtectionRule implements Node {
   allowsForcePushes: Boolean!
 
   """
+  Is branch creation a protected operation.
+  """
+  blocksCreations: Boolean!
+
+  """
   A list of conflicts matching branches protection rule and other branch protection rules
   """
   branchProtectionRuleConflicts(
@@ -5326,6 +5331,11 @@ input CreateBranchProtectionRuleInput {
   Are force pushes allowed on this branch.
   """
   allowsForcePushes: Boolean
+
+  """
+  Is branch creation a protected operation.
+  """
+  blocksCreations: Boolean
 
   """
   A list of User or Team IDs allowed to bypass force push targeting matching branches.
@@ -9727,14 +9737,6 @@ type EnterpriseBillingInfo {
   assetPacks: Int!
 
   """
-  The number of available seats across all owned organizations based on the unique number of billable users.
-  """
-  availableSeats: Int!
-    @deprecated(
-      reason: "`availableSeats` will be replaced with `totalAvailableLicenses` to provide more clarity on the value being returned Use EnterpriseBillingInfo.totalAvailableLicenses instead. Removal on 2020-01-01 UTC."
-    )
-
-  """
   The bandwidth quota in GB for all organizations owned by the enterprise.
   """
   bandwidthQuota: Float!
@@ -9748,14 +9750,6 @@ type EnterpriseBillingInfo {
   The bandwidth usage as a percentage of the bandwidth quota.
   """
   bandwidthUsagePercentage: Int!
-
-  """
-  The total seats across all organizations owned by the enterprise.
-  """
-  seats: Int!
-    @deprecated(
-      reason: "`seats` will be replaced with `totalLicenses` to provide more clarity on the value being returned Use EnterpriseBillingInfo.totalLicenses instead. Removal on 2020-01-01 UTC."
-    )
 
   """
   The storage quota in GB for all organizations owned by the enterprise.
@@ -28203,6 +28197,11 @@ type RefUpdateRule {
   allowsForcePushes: Boolean!
 
   """
+  Can matching branches be created.
+  """
+  blocksCreations: Boolean!
+
+  """
   Identifies the protection rule pattern.
   """
   pattern: String!
@@ -35645,6 +35644,11 @@ input StartRepositoryMigrationInput {
   repositoryName: String!
 
   """
+  Whether to skip migrating releases for the repository.
+  """
+  skipReleases: Boolean
+
+  """
   The ID of the Octoshift migration source.
   """
   sourceId: ID! @possibleTypes(concreteTypes: ["MigrationSource"])
@@ -38431,6 +38435,11 @@ type TreeEntry {
   isGenerated: Boolean!
 
   """
+  Number of lines in the file.
+  """
+  lineCount: Int
+
+  """
   Entry file mode.
   """
   mode: Int!
@@ -39046,6 +39055,11 @@ input UpdateBranchProtectionRuleInput {
   Are force pushes allowed on this branch.
   """
   allowsForcePushes: Boolean
+
+  """
+  Is branch creation a protected operation.
+  """
+  blocksCreations: Boolean
 
   """
   The global relay id of the branch protection rule to be updated.

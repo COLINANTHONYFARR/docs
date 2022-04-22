@@ -18,6 +18,8 @@ shortTitle: IAM with SAML SSO
 
 {% data reusables.saml.dotcom-saml-explanation %}
 
+{% data reusables.saml.ghec-only %}
+
 {% data reusables.saml.saml-accounts %}
 
 Organization owners can enforce SAML SSO for an individual organization, or enterprise owners can enforce SAML SSO for all organizations in an enterprise account. For more information, see "[Configuring SAML single sign-on for your enterprise](/enterprise-cloud@latest/admin/authentication/managing-identity-and-access-for-your-enterprise/configuring-saml-single-sign-on-for-your-enterprise)."
@@ -60,5 +62,6 @@ If your IdP supports SCIM, {% data variables.product.prodname_dotcom %} can auto
 
 ## Further reading
 
+- "[SAML configuration reference](/admin/identity-and-access-management/using-saml-for-enterprise-iam/saml-configuration-reference)"
 - "[About two-factor authentication and SAML single sign-on ](/articles/about-two-factor-authentication-and-saml-single-sign-on)"
 - "[About authentication with SAML single sign-on](/github/authenticating-to-github/about-authentication-with-saml-single-sign-on)"

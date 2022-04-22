@@ -7389,6 +7389,14 @@
           "href": "/graphql/reference/scalars#boolean"
         },
         {
+          "name": "blocksCreations",
+          "description": "<p>Is branch creation a protected operation.</p>",
+          "type": "Boolean!",
+          "id": "boolean",
+          "kind": "scalars",
+          "href": "/graphql/reference/scalars#boolean"
+        },
+        {
           "name": "branchProtectionRuleConflicts",
           "description": "<p>A list of conflicts matching branches protection rule and other branch protection rules.</p>",
           "type": "BranchProtectionRuleConflictConnection!",
@@ -16462,16 +16470,6 @@
           "href": "/graphql/reference/scalars#int"
         },
         {
-          "name": "availableSeats",
-          "description": "<p>The number of available seats across all owned organizations based on the unique number of billable users.</p>",
-          "type": "Int!",
-          "id": "int",
-          "kind": "scalars",
-          "href": "/graphql/reference/scalars#int",
-          "isDeprecated": true,
-          "deprecationReason": "<p><code>availableSeats</code> will be replaced with <code>totalAvailableLicenses</code> to provide more clarity on the value being returned Use EnterpriseBillingInfo.totalAvailableLicenses instead. Removal on 2020-01-01 UTC.</p>"
-        },
-        {
           "name": "bandwidthQuota",
           "description": "<p>The bandwidth quota in GB for all organizations owned by the enterprise.</p>",
           "type": "Float!",
@@ -16494,16 +16492,6 @@
           "id": "int",
           "kind": "scalars",
           "href": "/graphql/reference/scalars#int"
-        },
-        {
-          "name": "seats",
-          "description": "<p>The total seats across all organizations owned by the enterprise.</p>",
-          "type": "Int!",
-          "id": "int",
-          "kind": "scalars",
-          "href": "/graphql/reference/scalars#int",
-          "isDeprecated": true,
-          "deprecationReason": "<p><code>seats</code> will be replaced with <code>totalLicenses</code> to provide more clarity on the value being returned Use EnterpriseBillingInfo.totalLicenses instead. Removal on 2020-01-01 UTC.</p>"
         },
         {
           "name": "storageQuota",
@@ -39459,6 +39447,14 @@
           "href": "/graphql/reference/scalars#boolean"
         },
         {
+          "name": "blocksCreations",
+          "description": "<p>Can matching branches be created.</p>",
+          "type": "Boolean!",
+          "id": "boolean",
+          "kind": "scalars",
+          "href": "/graphql/reference/scalars#boolean"
+        },
+        {
           "name": "pattern",
           "description": "<p>Identifies the protection rule pattern.</p>",
           "type": "String!",
@@ -53937,6 +53933,14 @@
           "href": "/graphql/reference/scalars#boolean"
         },
         {
+          "name": "lineCount",
+          "description": "<p>Number of lines in the file.</p>",
+          "type": "Int",
+          "id": "int",
+          "kind": "scalars",
+          "href": "/graphql/reference/scalars#int"
+        },
+        {
           "name": "mode",
           "description": "<p>Entry file mode.</p>",
           "type": "Int!",
@@ -66046,6 +66050,14 @@
           "href": "/graphql/reference/scalars#boolean"
         },
         {
+          "name": "blocksCreations",
+          "description": "<p>Is branch creation a protected operation.</p>",
+          "type": "Boolean",
+          "id": "boolean",
+          "kind": "scalars",
+          "href": "/graphql/reference/scalars#boolean"
+        },
+        {
           "name": "bypassForcePushActorIds",
           "description": "<p>A list of User or Team IDs allowed to bypass force push targeting matching branches.</p>",
           "type": "[ID!]",
@@ -70143,6 +70155,14 @@
           "href": "/graphql/reference/scalars#string"
         },
         {
+          "name": "skipReleases",
+          "description": "<p>Whether to skip migrating releases for the repository.</p>",
+          "type": "Boolean",
+          "id": "boolean",
+          "kind": "scalars",
+          "href": "/graphql/reference/scalars#boolean"
+        },
+        {
           "name": "sourceId",
           "description": "<p>The ID of the Octoshift migration source.</p>",
           "type": "ID!",
@@ -70676,6 +70696,14 @@
         {
           "name": "allowsForcePushes",
           "description": "<p>Are force pushes allowed on this branch.</p>",
+          "type": "Boolean",
+          "id": "boolean",
+          "kind": "scalars",
+          "href": "/graphql/reference/scalars#boolean"
+        },
+        {
+          "name": "blocksCreations",
+          "description": "<p>Is branch creation a protected operation.</p>",
           "type": "Boolean",
           "id": "boolean",
           "kind": "scalars",
