@@ -1,6 +1,6 @@
 ---
-title: Commit comments
-intro: ''
+title: Comentários de commit
+intro: A API de comentários do Commit permite que você crie e edite comentários relacionados a commits específicos.
 versions:
   fpt: '*'
   ghes: '*'
@@ -12,14 +12,17 @@ miniTocMaxHeadingLevel: 3
 allowTitleToDifferFromFilename: true
 ---
 
-### Custom media types for commit comments
+## Sobre a API de comentários de commit
 
-These are the supported media types for commit comments. You can read more
-about the use of media types in the API [here](/rest/overview/media-types).
+A API de comentários do Commit permite que você crie e edite comentários relacionados a commits específicos.
+
+### Tipos de mídia personalizados para comentários de commit
+
+Estes são os tipos de mídia compatíveis com os comentários do commit. Você pode ler mais sobre o uso de tipos de mídia na API [aqui](/rest/overview/media-types).
 
     application/vnd.github-commitcomment.raw+json
     application/vnd.github-commitcomment.text+json
     application/vnd.github-commitcomment.html+json
     application/vnd.github-commitcomment.full+json
 
-For more information, see "[Custom media types](/rest/overview/media-types)."
+Para obter mais informações, consulte "[tipos de mídia personalizados](/rest/overview/media-types)".

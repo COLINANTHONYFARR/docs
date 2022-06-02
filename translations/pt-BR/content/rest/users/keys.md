@@ -1,5 +1,5 @@
 ---
-title: Git SSH Keys
+title: Chaves SSH do Git
 intro: ''
 versions:
   fpt: '*'
@@ -11,3 +11,7 @@ topics:
 miniTocMaxHeadingLevel: 3
 allowTitleToDifferFromFilename: true
 ---
+
+## Sobre a API das chaves SSH do Git de usuário
+
+{% data reusables.user-settings.user-api %}

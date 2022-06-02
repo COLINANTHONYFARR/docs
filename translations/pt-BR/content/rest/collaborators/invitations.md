@@ -1,6 +1,8 @@
 ---
-title: Invitations
-intro: 'The Repository Invitations API allows users or external services to invite other users to collaborate on a repo.'
+title: Convites do repositório
+allowTitleToDifferFromFilename: true
+shortTitle: Convites
+intro: A API de convites do repositório permite visualizar e gerenciar convites para colaborar em um repositório.
 versions:
   fpt: '*'
   ghes: '*'
@@ -11,12 +13,10 @@ topics:
 miniTocMaxHeadingLevel: 3
 ---
 
-The invited users (or external services on behalf of invited users) can choose to accept or decline the invitations.
+## Sobre a API de convites do repositório
 
-Note that the `repo:invite` [OAuth scope](/developers/apps/scopes-for-oauth-apps) grants targeted
-access to invitations **without** also granting access to repository code, while the
-`repo` scope grants permission to code as well as invitations.
+A API de convites do repositório permite visualizar e gerenciar convites para colaborar em um repositório. Os usuários convidados (ou serviços externos em nome dos usuários convidados) podem optar por aceitar ou recusar os convites.
 
-### Invite a user to a repository		
+Para adicionar um usuário como colaborador, use a API de Colaboradores. Para obter mais informações, consulte "[Adicionar um colaborador de repositório](/rest/collaborators/collaborators#add-a-repository-collaborator)".
 
-Use the API endpoint for adding a collaborator. For more information, see "[Add a repository collaborator](/rest/collaborators/collaborators#add-a-repository-collaborator)."
+Observe que o [Escopo OAuth](/developers/apps/scopes-for-oauth-apps) `repo:invite` concede acesso direcionado aos convites **sem** conceder também acesso ao código do repositório. enquanto o escopo `repo` concede permissão ao código e aos convites convites.

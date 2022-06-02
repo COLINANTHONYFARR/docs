@@ -1,6 +1,7 @@
 ---
-title: Apps
-intro: 'The GitHub Apps API enables you to retrieve the information about the installation as well as specific information about GitHub Apps.'
+title: Aplicativos do GitHub
+allowTitleToDifferFromFilename: true
+intro: 'A API de {% data variables.product.prodname_github_apps %} permite que você recupere informações sobre {% data variables.product.prodname_github_apps %}.'
 topics:
   - API
 miniTocMaxHeadingLevel: 3
@@ -11,12 +12,14 @@ versions:
   ghec: '*'
 ---
 
+## Sobre a API do {% data variables.product.prodname_github_apps %}
+
 {% data reusables.apps.general-apps-restrictions %}
 
-This page lists endpoints that you can access while authenticated as a GitHub App. See "[Authenticating as a GitHub App](/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app)" to learn more.
+Esta página lista os pontos de extremidade que você pode acessar enquanto autenticado como um aplicativo GitHub. Consulte "[Efetuar a autenticação como um aplicativo GitHub](/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app)" para saber mais.
 
-When authenticated as a GitHub App, the GitHub Apps API enables you to get high-level information about a GitHub App as well as specific information about installations of an app.
+Quando autenticado como um aplicativo GitHub, a API dos aplicativos GitHub permite que você obtenha informações de alto nível sobre um aplicativo GitHub, bem como informações específicas sobre instalações de um aplicativo.
 
-You can access REST API v3 endpoints while authenticated as a GitHub App. These endpoints have a "Notes" section that contains a bullet point that says "Works with GitHub Apps." You can also access these endpoints while authenticated as a user.
+Você pode acessar os pontos de extremidade da API v3 de REST enquanto autenticado como um aplicativo GitHub. Estes pontos de extremidade têm um texto que diz "Funciona com o aplicativo GitHub." Você também pode acessar esses pontos de extremidade enquanto estiver autenticado como usuário.
 
-A subset of REST API v3 endpoints requires authenticating as a GitHub App installation. See [Installations](/rest/reference/apps#installations) for a list of these endpoints.
+Um subconjunto de pontos de extremidade da API v2 de REST exige autenticação como uma instalação do aplicativo GitHub. Consulte [Instalações](/rest/reference/apps#installations) para obter uma lista desses pontos de extremidade.

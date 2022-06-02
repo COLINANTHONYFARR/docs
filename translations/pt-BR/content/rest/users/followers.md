@@ -1,5 +1,5 @@
 ---
-title: Followers
+title: Seguidores
 intro: ''
 versions:
   fpt: '*'
@@ -10,3 +10,7 @@ topics:
   - API
 miniTocMaxHeadingLevel: 3
 ---
+
+## Sobre a API Seguidores
+
+{% data reusables.user-settings.user-api %}

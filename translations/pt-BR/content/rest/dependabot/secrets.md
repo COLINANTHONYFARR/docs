@@ -1,6 +1,7 @@
 ---
-title: Secrets
-intro: 'With the Dependabot Secrets API, you can manage and control Dependabot secrets for an organization or repository.'
+title: Segredos do Dependabot
+shortTitle: Segredos
+intro: 'Com a API de segredos do {% data variables.product.prodname_dependabot %}, você pode gerenciar e controlar segredos de {% data variables.product.prodname_dependabot %} para uma organização ou repositório.'
 topics:
   - API
 versions:
@@ -10,6 +11,8 @@ versions:
 allowTitleToDifferFromFilename: true
 ---
 
-The {% data variables.product.prodname_dependabot %} Secrets API lets you create, update, delete, and retrieve information about encrypted secrets. {% data reusables.actions.about-secrets %} For more information, see "[Managing encrypted secrets for Dependabot](/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/managing-encrypted-secrets-for-dependabot)."
+## Sobre a API de segredos do {% data variables.product.prodname_dependabot %}
 
-{% data reusables.actions.actions-authentication %} {% data variables.product.prodname_github_apps %} must have the `dependabot_secrets` permission to use this API. Authenticated users must have collaborator access to a repository to create, update, or read secrets.
+A API de segredos de {% data variables.product.prodname_dependabot %} permite criar, atualizar, excluir e recuperar informações sobre segredos criptografados. {% data reusables.actions.about-secrets %} Para obter mais informações, consulte "[Gerenciar segredos criptografados para o dependabot](/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/managing-encrypted-secrets-for-dependabot)."
+
+{% data reusables.actions.actions-authentication %} {% data variables.product.prodname_github_apps %} deve ter a permissão `dependabot_secrets` para usar esta API. Os usuários autenticados devem ter acesso de colaborador em um repositório para criar, atualizar ou ler segredos.

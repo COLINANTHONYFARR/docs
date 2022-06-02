@@ -1,6 +1,8 @@
 ---
-title: Environments
-intro: 'The Environments API allows you to create, configure, and delete environments.'
+title: Ambiente de implantação
+allowTitleToDifferFromFilename: true
+shortTitle: Ambientes
+intro: 'A API de ambiente de implantação permite que você crie, configure e exclua ambientes de implantação.'
 versions:
   fpt: '*'
   ghes: '>=3.2'
@@ -11,6 +13,8 @@ topics:
 miniTocMaxHeadingLevel: 3
 ---
 
-For more information about environments, see "[Using environments for deployment](/actions/deployment/using-environments-for-deployment)." To manage environment secrets, see "[Secrets](/rest/reference/actions#secrets)."
+## Sobre a API de ambientes de implantação
+
+Para obter mais informações sobre ambientes, consulte "[Usando ambientes para implantação](/actions/deployment/using-environments-for-deployment)". Para gerenciar segredos de ambiente, consulte "[Segredos](/rest/reference/actions#secrets)".
 
 {% data reusables.gated-features.environments %}

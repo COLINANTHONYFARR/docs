@@ -1,6 +1,7 @@
 ---
-title: Repository
-intro: 'The Repository Interactions API allows people with owner or admin access to temporarily restrict which type of user can comment, open issues, or create pull requests in a public repository.'
+title: Interações do repositório
+shortTitle: Repositório
+intro: 'A API de Interações do repositório permite que pessoas com acesso de proprietário ou administrador restrinjam temporariamente qual tipo de usuário pode comentar, abrir problemas ou criar pull requests em um repositório público.'
 versions:
   fpt: '*'
   ghec: '*'
@@ -10,10 +11,12 @@ miniTocMaxHeadingLevel: 3
 allowTitleToDifferFromFilename: true
 ---
 
-{% data reusables.interactions.interactions-detail %} Here's more about the types of {% data variables.product.product_name %} users:
+## Sobre a API de interações do repositório
 
-* {% data reusables.interactions.existing-user-limit-definition %} in the repository.
-* {% data reusables.interactions.contributor-user-limit-definition %} in the repository.
-* {% data reusables.interactions.collaborator-user-limit-definition %} in the repository.
+A API de Interações do repositório permite que pessoas com acesso de proprietário ou administrador restrinjam temporariamente qual tipo de usuário pode comentar, abrir problemas ou criar pull requests em um repositório público. {% data reusables.interactions.interactions-detail %} Veja mais sobre os tipos de usuários de {% data variables.product.product_name %}:
 
-If an interaction limit is enabled for the user or organization that owns the repository, the limit cannot be changed for the individual repository. Instead, use the [User](#user) or [Organization](#organization) interactions endpoints to change the interaction limit.
+* {% data reusables.interactions.existing-user-limit-definition %} in the respository.
+* {% data reusables.interactions.contributor-user-limit-definition %} in the respository.
+* {% data reusables.interactions.collaborator-user-limit-definition %} in the respository.
+
+Se um limite de interação for habilitado para o usuário ou organização proprietária do repositório, o limite não poderá ser alterado para o repositório individual. Em vez disso, use os pontos de extremidade de [Usuário](#user) ou [Organização](#organization) para alterar o limite de interação.

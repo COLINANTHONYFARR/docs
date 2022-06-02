@@ -1,6 +1,6 @@
 ---
-title: Source Imports
-intro: '{% data variables.migrations.source_imports_intro %}'
+title: Importações de código-fonte
+intro: ''
 versions:
   fpt: '*'
   ghec: '*'
@@ -9,9 +9,11 @@ topics:
 miniTocMaxHeadingLevel: 3
 ---
 
-A typical source import would start the import and then (optionally) update the authors and/or update the preference for using Git LFS if large files exist in the import. You can also create a webhook that listens for the [`RepositoryImportEvent`](/developers/webhooks-and-events/webhook-events-and-payloads#repository_import) to find out the status of the import.
+## Sobre a API de importações de origem
 
-A more detailed example can be seen in this diagram:
+{% data variables.migrations.source_imports_intro %} Uma importação de origem típica iniciaria a importação e, em seguida, atualizaria, opcionalmente, os autores e/ou atualizaria a preferência por usar o LFS do Git se os arquivos grandes existirem na importação. Também é possível criar um webhook que ouve o [`ReposityImportEvent`](/developers/webhooks-and-events/webhook-events-and-payloads#repository_import) para descobrir o status da importação.
+
+Um exemplo mais detalhado pode ser visto neste diagrama:
 
 ```
 +---------+                     +--------+                              +---------------------+

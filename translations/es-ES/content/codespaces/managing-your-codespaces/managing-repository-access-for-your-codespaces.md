@@ -1,8 +1,8 @@
 ---
 title: Managing access to other repositories within your codespace
 allowTitleToDifferFromFilename: true
-shortTitle: Acceso a los repositorios
-intro: 'Puedes administrar los repositorios a los cuales pueden acceder los {% data variables.product.prodname_codespaces %}.'
+shortTitle: Repository access
+intro: 'You can manage the repositories that {% data variables.product.prodname_codespaces %} can access.'
 product: '{% data reusables.gated-features.codespaces %}'
 versions:
   fpt: '*'
@@ -14,22 +14,22 @@ redirect_from:
   - /codespaces/managing-your-codespaces/managing-access-and-security-for-your-codespaces
 ---
 
-## Resumen
+## Overview
 
 By default, your codespace is assigned a token scoped to the repository from which it was created. For more information, see "[Security in {% data variables.product.prodname_codespaces %}](/codespaces/codespaces-reference/security-in-codespaces#authentication)." If your project needs additional permissions for other repositories, you can configure this in the `devcontainer.json` file and ensure other collaborators have the right set of permissions.
 
 When permissions are listed in the `devcontainer.json` file, you will be prompted to review and authorize the additional permissions as part of codespace creation for that repository. Once you've authorized the listed permissions, {% data variables.product.prodname_github_codespaces %} will remember your choice and will not prompt you for authorization unless the permissions in the `devcontainer.json` file change.
 
-## Prerrequisitos
+## Prerequisites
 
 To create codespaces with custom permissions defined, you must use one of the following:
 * The {% data variables.product.prodname_dotcom %} web UI
 * [{% data variables.product.prodname_dotcom %} CLI](https://github.com/cli/cli/releases/latest) 2.5.2 or later
-* [{% data variables.product.prodname_github_codespaces %} Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces) 1.5.3 or later
+* [{% data variables.product.prodname_github_codespaces %} {% data variables.product.prodname_vscode %} extension](https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces) 1.5.3 or later
 
 ## Setting additional repository permissions
 
-1. You configure repository permissions for {% data variables.product.prodname_github_codespaces %} in the `devcontainer.json` file. Si tu repositorio no contiene ya un archivo `devcontainer.json`, agrégalo ahora. For more information, "[Add a dev container to your project](/codespaces/setting-up-your-project-for-codespaces/setting-up-your-project-for-codespaces)."
+1. You configure repository permissions for {% data variables.product.prodname_github_codespaces %} in the `devcontainer.json` file. If your repository does not already contain a `devcontainer.json` file, add one now. For more information, "[Add a dev container to your project](/codespaces/setting-up-your-project-for-codespaces/setting-up-your-project-for-codespaces)."
 
 1. Edit the `devcontainer.json` file, adding the repository name and permissions needed to the `repositories` object:
 
@@ -62,6 +62,7 @@ To create codespaces with custom permissions defined, you must use one of the fo
    * `deployments` - read / write
    * `discussions` - read / write
    * `issues` - read / write
+   * `packages` - read
    * `pages` - read / write
    * `pull_requests` - read / write
    * `repository_projects` - read / write
@@ -86,7 +87,7 @@ To create codespaces with custom permissions defined, you must use one of the fo
   }
   ```
 
-  To set all permissions for a given repository, use `read-all` or `write-all` in the `permissions` object
+  To set all permissions for a given repository, use `"permissions": "read-all"` or `"permissions": "write-all"` in the repository object.
 
   ```json
   {
@@ -94,9 +95,7 @@ To create codespaces with custom permissions defined, you must use one of the fo
       "codespaces": {
         "repositories": {
           "my_org/my_repo": {
-            "permissions": {
-              "write-all"
-            }
+            "permissions": "write-all"
           }
         }
       }
@@ -122,18 +121,18 @@ You can only authorize permissions that your personal account already possesses.
 
 {% endwarning %}
 
-When you enable access and security for a repository owned by your personal account, any codespaces that are created for that repository will have read permissions to all other repositories you own. Si quieres restringir los repositorios a los que puede acceder un codespace, puedes limitarlos a ya sea el repositorio para el cual se abrió el codespace o a repositorios específicos. Solo debes habilitar el acceso y la seguridad para los repositorios en los cuales confíes.
+When you enable access and security for a repository owned by your personal account, any codespaces that are created for that repository will have read permissions to all other repositories you own. If you want to restrict the repositories a codespace can access, you can limit to it to either the repository the codespace was opened for or specific repositories. You should only enable access and security for repositories you trust. 
 
 {% data reusables.user-settings.access_settings %}
 {% data reusables.user-settings.codespaces-tab %}
 1. Under "Access and security", select the setting you want for your personal account.
 
-  ![Botones radiales para adminsitrar los repositorios confiables](/assets/images/help/settings/codespaces-access-and-security-radio-buttons.png)
+  ![Radio buttons to manage trusted repositories](/assets/images/help/settings/codespaces-access-and-security-radio-buttons.png)
 
-1. Si eliges "Repositorios seleccionados", selecciona el menú desplegable y luego da clic en un repositorio para permitir que los codespaces de éste accedan al resto de los repositorios que te pertenecen. Repite esto para todos los repositorios cuyos codespaces quieras que accedan al resto de tus repositorios.
+1. If you chose "Selected repositories", select the drop-down menu, then click a repository to allow the repository's codespaces to access other repositories you own. Repeat for all repositories whose codespaces you want to access other repositories you own.
 
-  ![Menú desplegable de "Repositorios seleccionados"](/assets/images/help/settings/codespaces-access-and-security-repository-drop-down.png)
+  !["Selected repositories" drop-down menu](/assets/images/help/settings/codespaces-access-and-security-repository-drop-down.png)
 
-## Leer más
+## Further reading
 
-- "[Administrar el acceso a los repositorios para los codespaces de tu organización](/codespaces/managing-codespaces-for-your-organization/managing-repository-access-for-your-organizations-codespaces)"
+- "[Managing repository access for your organization's codespaces](/codespaces/managing-codespaces-for-your-organization/managing-repository-access-for-your-organizations-codespaces)"
